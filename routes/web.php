@@ -4,7 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\PasswordController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -85,7 +85,10 @@ Route::post('/product/search', [ProductController::class, 'search'])->name('prod
 //});
 Route::get('control/login', [\App\Http\Controllers\Admin\LoginController::class, 'index'])->name('login.index');
 Route::post('control/login', [\App\Http\Controllers\Admin\LoginController::class, 'authenticate'])->name('login.post');
-Route::middleware(['auth'])->group(function () {
+Route::get('/change-password', [\App\Http\Controllers\Admin\PasswordController::class, 'passwordreset'])->name('passwordreset');
+Route::post('/change-password', [App\Http\Controllers\LoginController::class, 'UpdatePassword'])->name('updatepassword');
+
+// Route::middleware(['auth'])->group(function () {
     Route::get('/control', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard.index');
     Route::prefix('control')->group(function () {
         Route::get('/category', [\App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('category.index');
@@ -99,7 +102,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/product/store', [\App\Http\Controllers\Admin\ProductController::class, 'store'])->name('product.store');
         Route::get('/logout', [\App\Http\Controllers\Admin\LogoutController::class, 'logout'])->name('logout');
     });
-});
+
 
 
 
