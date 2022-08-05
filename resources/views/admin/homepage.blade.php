@@ -1,4 +1,3 @@
-@extends('admin.layouts.master')
 
 @section('content')
     <div class="page-wrapper">
@@ -15,7 +14,8 @@
                         </ol>
                     </div>
                 </div>
-            </div>
+            </div>@extends('admin.layouts.master')
+
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
