@@ -17,11 +17,11 @@ class ContactController extends Controller
         return view('admin.contact',compact('users'));
     }
 
-    public function store(){
+    // public function store() {
 
-        Contact::where(idupdate ([
+    //     Contact::where(idupdate ([
 
-            'name'=>'$users->'
-        ])
-    }
+    //         // 'name'=>'$users->'
+    //     ])
+    // }
 }

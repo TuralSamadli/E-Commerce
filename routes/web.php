@@ -87,7 +87,7 @@ Route::get('control/login', [\App\Http\Controllers\Admin\LoginController::class,
 Route::post('control/login', [\App\Http\Controllers\Admin\LoginController::class, 'authenticate'])->name('login.post');
 Route::get('/change-password', [\App\Http\Controllers\Admin\PasswordController::class, 'passwordreset'])->name('passwordreset');
 Route::post('/change-password', [App\Http\Controllers\LoginController::class, 'UpdatePassword'])->name('updatepassword');
-Route::get('/search', [\App\Http\Controllers\Admin\ProductController::class, 'search'])->name('product.search');
+Route::get('/search', [\App\Http\Controllers\ProductController::class, 'search'])->name('product.search');
 // Route::middleware(['auth'])->group(function () {
     Route::get('/control', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard.index');
     Route::prefix('control')->group(function () {
@@ -103,7 +103,7 @@ Route::get('/search', [\App\Http\Controllers\Admin\ProductController::class, 'se
         Route::get('/logout', [\App\Http\Controllers\Admin\LogoutController::class, 'logout'])->name('logout');
         Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'contact'])->name('contact.index');
         // Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'index'])->name('user');
-        Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'store'])->name('store.index');
+        // Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'store'])->name('store.index');
 
     });
 

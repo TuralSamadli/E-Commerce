@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Product;
+use Illuminate\Http\Request;
+
 
 class ProductController extends Controller
 {
@@ -16,5 +18,9 @@ class ProductController extends Controller
     public function create()
     {
         return view('admin.product.create');
+    }
+    public function search(Request $request){
+        $data=$request->search_data;
+        $products=Product::where('name','like','%'. $data.'%') -> orWhere ('description','like','%'. $data.'%')->get();
     }
 }
