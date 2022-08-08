@@ -23,6 +23,6 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('post.list', PostComposer::class);
+        // View::composer('post.list', PostComposer::class);
     }
 }
