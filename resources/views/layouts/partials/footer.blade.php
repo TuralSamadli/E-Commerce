@@ -10,4 +10,5 @@
         </div>
     </div>
     <a href="https://www.facebook.com/"><p>Facebook </p></a>
+    <h1>{{ $product->name }}</h1>
 </footer>

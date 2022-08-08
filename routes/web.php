@@ -5,6 +5,8 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PasswordController;
+use App\Http\Controllers\Admin\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -102,7 +104,7 @@ Route::get('/search', [\App\Http\Controllers\ProductController::class, 'search']
         Route::post('/product/store', [\App\Http\Controllers\Admin\ProductController::class, 'store'])->name('product.store');
         Route::get('/logout', [\App\Http\Controllers\Admin\LogoutController::class, 'logout'])->name('logout');
         Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'contact'])->name('contact.index');
-        // Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'index'])->name('user');
+        Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'index'])->name('user');
         // Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'store'])->name('store.index');
 
     });

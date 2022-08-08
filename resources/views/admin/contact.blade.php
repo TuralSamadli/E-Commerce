@@ -15,24 +15,24 @@
                 </div>
             @endif
             <h1>Contact Page</h1>
-            <form method="POST" action=""{{ route('contact.index') }}" class="form-horizontal mt-4">
+            <form method="POST" action=""{{ route('user') }}" class="form-horizontal mt-4">
                 @csrf
                 <input type="hidden" value="{{ $users->id }}" name="id_category">
                 <div class="form-group" style="width: 50%">
                     <label>User Name</label>
-                    <input value="{{ $users->name }}" type="text" class="form-control" name="category_name">
+                    <input value="{{ $users->name }}" type="text" class="form-control" name="name">
                 </div>
                 <div class="form-group" style="width: 50%">
                     <label>User Surname</label>
-                    <input value="{{ $users->surname }}" type="text" class="form-control" name="category_name">
+                    <input value="{{ $users->surname }}" type="text" class="form-control" name="surname">
                 </div>
                 <div class="form-group" style="width: 50%">
                     <label>User Email</label>
-                    <input value="{{ $users->email }}" type="text" class="form-control" name="category_name">
+                    <input value="{{ $users->email }}" type="text" class="form-control" name="email">
                 </div>
                 <div class="form-group" style="width: 50%">
                     <label>User Address</label>
-                    <input value="{{ $users->address }}" type="text" class="form-control" name="category_name">
+                    <input value="{{ $users->adress }}" type="text" class="form-control" name="adress">
                 </div>
                     
 

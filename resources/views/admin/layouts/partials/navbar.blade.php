@@ -43,7 +43,12 @@
                         <span class="hide-menu">Product</span>
                     </a>
                 </li>
-
+                <li>
+                    <a class="waves-effect waves-dark" href="{{ route('user') }}" aria-expanded="false">
+                        <i class="far fa-circle text-danger"></i>
+                        <span class="hide-menu">Contact</span>
+                    </a>
+                </li>
 {{--                <li>--}}
 {{--                    <a class="waves-effect waves-dark" href="{{ route('slider.index') }}" aria-expanded="false">--}}
 {{--                        <i class="far fa-circle text-info"></i>--}}
