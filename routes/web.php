@@ -102,7 +102,8 @@ Route::get('/search', [\App\Http\Controllers\Admin\ProductController::class, 'se
         Route::post('/product/store', [\App\Http\Controllers\Admin\ProductController::class, 'store'])->name('product.store');
         Route::get('/logout', [\App\Http\Controllers\Admin\LogoutController::class, 'logout'])->name('logout');
         Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'contact'])->name('contact.index');
-        Route::post('/contact', [\App\Http\Controllers\Admin\ContactController::class,'index'])->name('user');
+        // Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'index'])->name('user');
+        Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'store'])->name('store.index');
 
     });
 

@@ -16,4 +16,12 @@ class ContactController extends Controller
         $users=Contact::where('id', 1)->first();
         return view('admin.contact',compact('users'));
     }
+
+    public function store(){
+
+        Contact::where(idupdate ([
+
+            'name'=>'$users->'
+        ])
+    }
 }
