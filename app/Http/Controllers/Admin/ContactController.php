@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use GrahamCampbell\ResultType\Success;
 
 class ContactController extends Controller
 {
@@ -17,14 +18,16 @@ class ContactController extends Controller
         return view('admin.contact',compact('users'));
     }
 
-    // public function store(Request $request, $id)
-    // {
-    //     $users = Contact::find($id);
-    //     $users->name = $request->input('name');
-    //     $users->email = $request->input('email');
-    //     $users->surname = $request->input('surname');
-    //     $users->adress = $request->input('adress');
-    //     $users->update();
-    //     return redirect()->back()->with('status','User Updated Successfully');
-    // }
+    public function store(Request $request)
+    {
+        $contact = Contact::where('id',1)->update([
+            'name'      => $request->name,
+            'surname'   => $request->surname,
+            'adress'   => $request->adress,
+            'email'         => $request->email
+        ]);
+        
+             return redirect()-> back()->with('success','Istifadeci melumatlari yenilendi');
+        
+}
 }

@@ -105,7 +105,7 @@ Route::get('/search', [\App\Http\Controllers\ProductController::class, 'search']
         Route::get('/logout', [\App\Http\Controllers\Admin\LogoutController::class, 'logout'])->name('logout');
         Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'contact'])->name('contact.index');
         Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'index'])->name('user');
-        // Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class,'store'])->name('store.index');
+        Route::post('/contact', [\App\Http\Controllers\Admin\ContactController::class,'store'])->name('store.index');
 
     });
 

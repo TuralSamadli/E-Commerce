@@ -14,8 +14,9 @@
                     </ul>
                 </div>
             @endif
+
             <h1>Contact Page</h1>
-            <form method="POST" action=""{{ route('user') }}" class="form-horizontal mt-4">
+            <form method="POST" action=""{{ route('store.index') }}" class="form-horizontal mt-4">
                 @csrf
                 <input type="hidden" value="{{ $users->id }}" name="id_category">
                 <div class="form-group" style="width: 50%">
@@ -38,7 +39,7 @@
 
 
                 <div class="button-group" style="margin-left: 450px; padding-top: 20px">
-                    <button type="submit" class="btn waves-effect waves-light btn-success">Edit User Information</button>
+                    <button  onclick="" type="submit" class="btn waves-effect waves-light btn-success">Edit User Information</button>
                 </div>
 
             </form>
